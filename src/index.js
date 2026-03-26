@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/dashboard", (req,res) => {
-  res.send("dashboard");
+  res.send("dashboard is cool");
 })
 
 app.get("/info", (req,res) => {
