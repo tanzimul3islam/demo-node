@@ -22,6 +22,10 @@ app.get("/", (req, res) => {
   res.send("hello world!");
 });
 
+app.get("/dashboard", (req,res) => {
+  res.send("hello from dashboard");
+})
+
 app.get("/metrics", async (req, res) => {
   res.set("Content-Type", register.contentType);
   res.end(await register.metrics());
