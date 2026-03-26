@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/dashboard", (req,res) => {
-  res.send("hello from dashboard");
+  res.send("dashboard");
 })
 
 app.get("/metrics", async (req, res) => {
