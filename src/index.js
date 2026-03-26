@@ -19,7 +19,7 @@ register.registerMetric(httpRequestCounter);
 // Routes
 app.get("/", (req, res) => {
   httpRequestCounter.inc();
-  res.send("hello world!");
+  res.send("hello world! , developed by tanzimul");
 });
 
 app.get("/dashboard", (req,res) => {
