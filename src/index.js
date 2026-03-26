@@ -27,7 +27,7 @@ app.get("/dashboard", (req,res) => {
 })
 
 app.get("/info", (req,res) => {
-  res.send("demo node app info");
+  res.send("demo node app info , made for testing");
 })
 
 app.get("/metrics", async (req, res) => {
