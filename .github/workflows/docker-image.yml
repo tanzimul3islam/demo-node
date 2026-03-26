@@ -10,14 +10,12 @@ jobs:
     permissions:
       contents: write
       packages: write
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      # Defaults to patch version, will bump minor on "feat" commit
+        with:
+          fetch-depth: 0
 
       - name: Get Next Version
         id: semver
@@ -25,6 +23,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
+          fallbackTag: v1.0.0
           patchAll: true
 
       - name: Push tag
@@ -46,7 +45,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          # platforms: linux/amd64,linux/arm64
           platforms: linux/amd64
           push: true
           tags: |
