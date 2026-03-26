@@ -25,4 +25,6 @@ COPY --chown=node:node package.json ./
 # Switch to built-in non-root node user ✅
 USER node
 
+EXPOSE 3000
+
 CMD ["node", "src/index.js"]
