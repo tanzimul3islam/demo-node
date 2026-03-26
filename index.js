@@ -26,6 +26,10 @@ app.get("/dashboard", (req,res) => {
   res.send("dashboard");
 })
 
+app.get("/info", (req,res) => {
+  res.send("demo node app info");
+})
+
 app.get("/metrics", async (req, res) => {
   res.set("Content-Type", register.contentType);
   res.end(await register.metrics());
